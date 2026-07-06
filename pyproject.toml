@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stagps"
+version = "0.1.0"
+description = "Graph-spectral discovery of gene-defined steady-state programs."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scanpy",
+    "scipy",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+examples = ["matplotlib", "ipykernel"]
+
+[tool.setuptools.packages.find]
+include = ["stagps*", "graph_steady*"]
